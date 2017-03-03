@@ -3,8 +3,6 @@ set -e
 
 
 echo "Setting permissions for the docker container..."
-/tools/permission_fix || true
+./permission_fix || true
 chown -R $DOCKER_USER:$DOCKER_GROUP $VOLUME || true
 echo "Done."
-
-nginx -g "daemon off;"
