@@ -3,6 +3,6 @@ set -e
 
 
 echo "Setting permissions for the docker container..."
-./permission_fix || true
+/root/.permission-fix/tools/permission_fix || true
 chown -R $DOCKER_USER:$DOCKER_GROUP $VOLUME || true
 echo "Done."
